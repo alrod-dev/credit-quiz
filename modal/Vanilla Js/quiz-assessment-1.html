@@ -1,0 +1,265 @@
+<style>
+
+    /*Quiz Assessment*/
+
+    section.quiz-assessment {
+        position: fixed;
+        bottom: -200px;
+        left: 0;
+        right: 0;
+        z-index: 11;
+        opacity: 0;
+
+        -webkit-transition: all 0.5s ease-out;
+        -moz-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
+
+        -webkit-transition-property: bottom, opacity; /* Safari */
+        -webkit-transition-duration: 0.5s; /* Safari */
+        transition-property: bottom, opacity;
+        transition-duration: 0.5s;
+
+    }
+
+    section.quiz-assessment.abierto {
+        bottom: 0;
+        opacity: 1;
+    }
+
+    div.quiz-pop-up-box {
+        background-color: #edf3f8;
+        position: relative;
+        width: 90%;
+        max-width: 550px;
+        padding: 10px;
+        margin: 10px auto;
+        overflow: hidden;
+
+        font-family: "Museo-300", sans-serif;
+
+        border-radius: 5px;
+    }
+
+    .sprite-image-box, .credit-cost-box, .find-out-now-box {
+        float: left;
+    }
+
+    .sprite-image-box, .find-out-now-box {
+        width: 30%;
+        text-align: center;
+    }
+
+    .find-out-now-box {
+        margin-top: 40px;
+    }
+
+    .credit-cost-box {
+        width: 40%;
+    }
+
+    /*Image*/
+    .unknown-report {
+        width: 55px;
+        margin: 15px;
+    }
+
+    /*Text*/
+    p.credit-costing-bolded {
+        font-family: "Museo-700", sans-serif;
+        font-size: 18px;
+        margin: 12px 0 0 0;
+        line-height: 1.5;
+    }
+
+    p.credit-costing-subtext {
+        font-size: 18px;
+        margin: 0 auto;
+    }
+
+    a.find-out-now {
+        text-decoration: none;
+        color: #75baea;
+        font-size: 20px;
+    }
+
+    a.find-out-now:hover {
+        text-decoration: underline;
+        color: #6393b5;
+    }
+
+    a.quiz-cerrado {
+        display: block;
+        position: relative;
+        text-decoration: none;
+        border: none;
+    }
+
+    span.quiz-exit-cross {
+        cursor: pointer;
+        color: #00204f;
+        transition: 0.3s ease-out;
+        position: absolute;
+
+        transform: rotate(45deg);
+        top: -7px;
+        left: 0px;
+        font-size: 26px;
+    }
+
+    span.quiz-exit-cross:hover {
+        color: #75baea;
+    }
+
+    /*Media Queries*/
+    @media screen and (max-width: 520px) {
+
+        p.credit-costing-subtext, p.credit-costing-bolded {
+            font-size: 16px;
+        }
+
+        a.find-out-now {
+            font-size: 18px;
+        }
+
+        .unknown-report {
+            width: 40px;
+        }
+
+        .sprite-image-box {
+            text-align: right;
+            width: 20%;
+        }
+
+        .credit-cost-box {
+            width: 50%;
+        }
+
+    }
+
+    @media screen and (max-width: 420px) {
+
+        p.credit-costing-subtext, p.credit-costing-bolded {
+            font-size: 14px;
+            margin-left: 5px;
+        }
+
+        .find-out-now-box {
+            margin-top: 30px;
+        }
+
+        a.find-out-now {
+            font-size: 15px;
+        }
+
+        .unknown-report {
+            width: 35px;
+        }
+
+        span.quiz-exit-cross {
+            font-size: 20px;
+        }
+
+    }
+
+</style>
+
+<section class="quiz-assessment" id="quiz-assessment-popup">
+
+    <div class="quiz-pop-up-box">
+
+        <a class="quiz-cerrado" onclick="closePopUp()"><span class="quiz-exit-cross" data-unique="quiz-nag-cerrado">+</span></a>
+
+        <div class="sprite-image-box">
+
+            <img src="https://www.lexingtonlaw.com/content/dam/landing-pages/lexington/credit-quiz/Unknown.png"
+                 class="unknown-report" alt="">
+
+        </div>
+
+        <div class="credit-cost-box">
+            <p class="credit-costing-bolded">
+                What is your credit costing you?
+            </p>
+
+            <p class="credit-costing-subtext">
+                Answer 3 questions.
+            </p>
+        </div>
+
+        <div class="find-out-now-box">
+
+            <a href="/a/credit-quiz.html" class="find-out-now" data-unique="quiz-nag-abierto">FIND OUT</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+
+
+        var newElement = document.createElement("div");
+
+        newElement.innerHTML = "<section class=\"quiz-assessment\" id=\"quiz-assessment-popup\">\n" +
+            "\n" +
+            "    <div class=\"quiz-pop-up-box\">\n" +
+            "\n" +
+            "        <a class=\"quiz-cerrado\" onclick=\"closePopUp()\"><span class=\"quiz-exit-cross\" data-unique=\"quiz-nag-cerrado\">+</span></a>\n" +
+            "\n" +
+            "        <div class=\"sprite-image-box\">\n" +
+            "\n" +
+            "            <img src=\"https://www.lexingtonlaw.com/content/dam/landing-pages/lexington/credit-quiz/Unknown.png\"\n" +
+            "                 class=\"unknown-report\" alt=\"\">\n" +
+            "\n" +
+            "        </div>\n" +
+            "\n" +
+            "        <div class=\"credit-cost-box\">\n" +
+            "            <p class=\"credit-costing-bolded\">\n" +
+            "                What is your credit costing you?\n" +
+            "            </p>\n" +
+            "\n" +
+            "            <p class=\"credit-costing-subtext\">\n" +
+            "                Answer 3 questions.\n" +
+            "            </p>\n" +
+            "        </div>\n" +
+            "\n" +
+            "        <div class=\"find-out-now-box\">\n" +
+            "\n" +
+            "            <a href=\"/a/credit-quiz.html\" class=\"find-out-now\" data-unique=\"quiz-nag-abierto\">FIND OUT</a>\n" +
+            "\n" +
+            "        </div>\n" +
+            "\n" +
+            "    </div>\n" +
+            "\n" +
+            "</section>";
+
+        document.getElementsByTagName('html')[0].appendChild(newElement);
+
+
+</script>
+
+<script>
+
+    var firstTime = true;
+
+    function closePopUp() {
+        document.getElementById("quiz-assessment-popup").classList.remove("abierto");
+    }
+
+    window.onscroll = function () {
+
+        if (firstTime) {
+
+            if (window.pageYOffset >= 500) {
+                setTimeout(function () {
+                    document.getElementById("quiz-assessment-popup").classList.add("abierto");
+                }, 500);
+
+                firstTime = false;
+            }
+        }
+    };
+
+</script>

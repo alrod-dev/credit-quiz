@@ -1,0 +1,107 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-0 {
+    width: 63px;
+    height: 82px;
+    background-position: -10px -10px;
+}
+
+.sprite-1-5 {
+    width: 63px;
+    height: 82px;
+    background-position: -93px -10px;
+}
+
+.sprite-10 {
+    width: 63px;
+    height: 82px;
+    background-position: -171px -5px;
+}
+
+.sprite-6-10 {
+    width: 63px;
+    height: 82px;
+    background-position: -249px -10px;
+}
+
+.sprite-Average {
+    width: 63px;
+    height: 86px;
+    background-position: -332px -10px;
+}
+
+.sprite-Ccard {
+    width: 77px;
+    height: 68px;
+    background-position: -415px -10px;
+}
+
+.sprite-Credit-Audit {
+    width: 31px;
+    height: 39px;
+    background-position: -512px -10px;
+}
+
+.sprite-Credit-Report {
+    width: 50px;
+    height: 40px;
+    background-position: -563px -10px;
+}
+
+.sprite-Excellent {
+    width: 86px;
+    height: 86px;
+    background-position: -633px -10px;
+}
+
+.sprite-Good {
+    width: 65px;
+    height: 89px;
+    background-position: -739px -10px;
+}
+
+.sprite-NS {
+    width: 63px;
+    height: 63px;
+    background-position: -824px -10px;
+}
+
+.sprite-Poor {
+    width: 63px;
+    height: 63px;
+    background-position: -907px -10px;
+}
+
+.sprite-Refi {
+    width: 79px;
+    height: 77px;
+    background-position: -990px -10px;
+}
+
+.sprite-Score-Evaluation {
+    width: 39px;
+    height: 39px;
+    background-position: -1089px -10px;
+}
+
+.sprite-Unknown {
+    width: 68px;
+    height: 89px;
+    background-position: -1148px -10px;
+}
+
+.sprite-car {
+    width: 96px;
+    height: 60px;
+    background-position: -1236px -10px;
+}
+
+.sprite-home {
+    width: 84px;
+    height: 81px;
+    background-position: -1352px -10px;
+}

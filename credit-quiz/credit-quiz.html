@@ -1,0 +1,368 @@
+<link rel="stylesheet" href="./credit-quiz-style.css">
+
+
+<!--Fixed Nav Bar-->
+<section class="top_bar_nav">
+
+    <nav class="desktop_site_nav">
+        <div class="container-boundaries">
+            <ul class="desktop_site_nav_left">
+                <li>
+                    <a href="/" id="company_logo">
+                        <img class="no-offset"
+                             src="https://www.lexingtonlaw.com/content/dam/landing-pages/lexington/common/images/lexington-law-logo-blue.png"
+                             alt="Lexington Law">
+                        <img class="top-offset" src="assets/img/company-logo-short.png" alt="Lexington Law">
+                    </a>
+                </li>
+
+            </ul>
+            <ul class="desktop_site_nav_right">
+                <li class="site_nav_call_btn_desktop"><a href="tel:1-855-255-0139" data-unique="nav-phone-number"><span
+                        class="mobile-view-number">Tap To Call</span><span
+                        class="desktop-view-number">Call: 1-<span
+                        class="lexingtonPhoneNumber phoneNumber">855-255-0139</span></span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</section>
+
+
+<!--Quiz Section-->
+<section class="quiz-section">
+
+    <!--Question 1-->
+    <form id="form1">
+        <div class="question-section">
+
+            <h1 class="quiz-title">Why do you need credit?</h1>
+
+            <div class="questions-boundaries">
+
+                <div class="questions-box">
+
+                    <input name="image-pick" value="home" type="radio" id="form1-one">
+                    <label for="form1-one">
+                        <a class="questions has-hover form1-questions" data-unique="form1-question1">
+                            <i class="sprite sprite-home"></i>
+                            <p class="question-title">Buy a Home</p>
+                        </a>
+                    </label>
+
+
+                </div>
+
+                <div class="questions-box">
+
+                    <input name="image-pick" value="car" type="radio" id="form1-two">
+                    <label for="form1-two">
+
+                        <a class="questions has-hover form1-questions" data-unique="form1-question2">
+                            <i class="sprite sprite-car"></i>
+                            <p class="question-title" id="car-title">Buy a Car</p>
+                        </a>
+
+                    </label>
+
+                </div>
+
+                <div class="questions-box">
+
+                    <input name="image-pick" value="loan" type="radio" id="form1-three">
+                    <label for="form1-three">
+
+                        <a class="questions has-hover form1-questions" data-unique="form1-question3">
+                            <i class="sprite sprite-Refi"></i>
+                            <p class="question-title">Refinance a Loan</p>
+                        </a>
+
+                    </label>
+
+                </div>
+
+                <div class="questions-box">
+
+                    <input name="image-pick" value="credit-card" type="radio" id="form1-four">
+                    <label for="form1-four">
+
+                        <a class="questions has-hover form1-questions" data-unique="form1-question4">
+                            <i class="sprite sprite-Ccard"></i>
+                            <p class="question-title" id="cc-text">Get a Credit Card</p>
+                        </a>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+        </div>
+    </form>
+
+
+    <!--Question 2-->
+    <form id="form2">
+        <div class="question-section">
+
+            <h1 class="quiz-title">What is your credit score?</h1>
+
+            <div class="questions-boundaries">
+
+                <div class="back-button-box" id="back-button-1">
+                    <a href="#" class="back-button" id="back-1" data-unique="form2-back-button">&#171; Back</a>
+                </div>
+
+
+                <div class="questions-box">
+
+                    <input name="fico-score" value="less-than-549" type="radio" id="form2-one">
+                    <label for="form2-one">
+                        <a class="questions has-hover form2-questions" data-unique="form2-question1">
+                            <i class="sprite sprite-Poor"></i>
+                            <p class="question-title form2-one-text">&#60; 549</p>
+                        </a>
+                    </label>
+
+
+                </div>
+
+                <div class="questions-box">
+
+                    <input name="fico-score" value="550-599" type="radio" id="form2-two">
+                    <label for="form2-two">
+
+                        <a class="questions has-hover form2-questions" data-unique="form2-question2">
+                            <i class="sprite sprite-Average"></i>
+                            <p class="question-title form2-two-text">550 &#45; 599</p>
+                        </a>
+
+                    </label>
+
+                </div>
+
+                <div class="questions-box">
+
+                    <input name="fico-score" value="600-649" type="radio" id="form2-three">
+                    <label for="form2-three">
+
+                        <a class="questions has-hover form2-questions" data-unique="form2-question3">
+                            <i class="sprite sprite-Good"></i>
+                            <p class="question-title form2-three-text">600 &#45; 649</p>
+                        </a>
+
+                    </label>
+
+                </div>
+
+                <div class="questions-box">
+
+                    <input name="fico-score" value="650+" type="radio" id="form2-four">
+                    <label for="form2-four">
+
+                        <a class="questions has-hover form2-questions" data-unique="form2-question4">
+                            <i class="sprite sprite-Excellent"></i>
+                            <p class="question-title form2-four-text">650 &#43;</p>
+                        </a>
+
+                    </label>
+
+                </div>
+
+                <div class="questions-box no-score">
+
+                    <a class="questions has-hover modal-color" data-unique="form2-modal-abierto">
+                        <i class="sprite sprite-NS"></i>
+                        <p class="question-title" id="no-score">Don&#39;t know your score? <span class="break-text">Get it <span
+                                class="bolded">FREE</span></span></p>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </form>
+
+
+    <!--Question 3-->
+    <form id="form3">
+        <div class="question-section">
+
+            <h1 class="quiz-title fixed-title">How many negative items are on your credit report?</h1>
+            <p class="quiz-subtitle">Negative items on your credit report may include collections, charge&#45;offs,
+                30&#45;day
+                late payments, etc.</p>
+
+            <div class="questions-boundaries">
+
+                <div class="back-button-box" id="back-button-2">
+                    <a href="#" class="back-button" id="back-2" data-unique="form3-back-button">&#171; Back</a>
+                </div>
+
+                <div class="questions-box">
+
+                    <input name="negative-items" value="0-items" type="radio" id="form3-one">
+                    <label for="form3-one">
+                        <a class="questions has-hover form3-questions" data-unique="form3-question1">
+                            <i class="sprite sprite-0"></i>
+                            <p class="question-title"><span class="break-text">0 </span><span
+                                    class="lighter-text">Items</span></p>
+                        </a>
+                    </label>
+
+
+                </div>
+
+                <div class="questions-box">
+
+                    <input name="negative-items" value="1-to-5-items" type="radio" id="form3-two">
+                    <label for="form3-two">
+
+                        <a class="questions has-hover form3-questions" data-unique="form3-question2">
+                            <i class="sprite sprite-1-5"></i>
+                            <p class="question-title"><span class="break-text">1 &#45; 5 </span><span
+                                    class="lighter-text">Items</span></p>
+                        </a>
+
+                    </label>
+
+                </div>
+
+                <div class="questions-box">
+
+                    <input name="negative-items" value="6-to-10-items" type="radio" id="form3-three">
+                    <label for="form3-three">
+
+                        <a class="questions has-hover form3-questions" data-unique="form3-question3">
+                            <i class="sprite sprite-6-10"></i>
+                            <p class="question-title"><span class="break-text">6 &#45; 10 </span><span
+                                    class="lighter-text">Items</span></p>
+                        </a>
+
+                    </label>
+
+                </div>
+
+                <div class="questions-box">
+
+                    <input name="negative-items" value="items-10" type="radio" id="form3-four">
+                    <label for="form3-four">
+
+                        <a class="questions has-hover form3-questions" data-unique="form3-question4">
+                            <i class="sprite sprite-10"></i>
+                            <p class="question-title" id="most-negative-items"><span
+                                    class="break-text">More than 10 </span><span class="lighter-text">Items</span>
+                            </p>
+                        </a>
+
+                    </label>
+
+                </div>
+
+                <div class="questions-box no-score">
+
+                    <a class="questions has-hover modal-color" data-unique="form3-modal-abierto">
+                        <i class="sprite sprite-Unknown"></i>
+                        <p class="question-title" id="no-report">Don&#39;t know what&#39;s on your report? <span
+                                class="break-text">Find out for <span
+                                class="bolded">FREE</span></span></p>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </form>
+
+</section>
+
+
+<section class="results">
+
+    <div class="results-section">
+
+        <div class="main-text-box">
+            <h1 class="main-header">40 points could cost you as much as<span>&#36;65,189</span>on your loan</h1>
+            <p class="main-subtitle">We've helped thousands improve their credit scores. See if we can help you too.</p>
+        </div>
+
+        <div class="call-now-button-boundaries">
+
+            <a href="tel:1-855-255-0139" class="call-now" data-unique="results-phone-number">Call: 1-<span
+                    class="lexingtonPhoneNumber phoneNumber">855-255-0139</span></a>
+
+            <a href="/signup" class="sign-up" data-unique="results-sign-up">Or sign up online &#187;</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="disclouse">
+
+    <p class="disclosure-text">&#42; The 30&#45;year fixed mortgage APRs are estimated based on the following
+        assumptions. FICO&#174; scores between 620 and 850 (500 and 619) assume a Loan Amount of &#36;150,000, 1.0 (0.0)
+        points, a Single Family &#45; Owner Occupied Property Type and an 80&#37; (60&#45;80&#37;) Loan&#45;to&#45;Value
+        Ratio</p>
+
+</section>
+
+<div class="overlay"></div>
+<div class="modal-quiz">
+
+    <span class="exit-modal" data-unique="modal-cerrado">&#215;</span>
+
+    <h1 class="main-header-2">Get a FREE Consultation</h1>
+
+    <div class="credit-info-box">
+
+        <p class="credit-text"><i class="sprite sprite-Credit-Report"></i><span class="upper-color-text">free</span>
+            <span class="inner-text">TransUnion report summary</span></p>
+
+    </div>
+
+    <div class="credit-info-box">
+
+        <p class="credit-text"><i class="sprite sprite-Credit-Audit"></i><span class="upper-color-text">free</span>
+            <span class="inner-text">audit on all of your accounts</span></p>
+
+    </div>
+
+
+    <div class="credit-info-box">
+
+        <p class="credit-text"><i class="sprite sprite-Score-Evaluation"></i><span class="upper-color-text">free</span>
+            <span class="inner-text">FICO score and evaluation</span></p>
+
+    </div>
+
+
+    <div class="button-box">
+
+        <p class="top-text">Call Now to Claim</p>
+
+        <div class="call-now-button-boundaries">
+
+            <a href="tel:1-855-255-0139" class="call-now" data-unique="modal-phone-number">Call: 1-<span
+                    class="lexingtonPhoneNumber phoneNumber">855-255-0139</span></a>
+
+            <a href="/signup" class="sign-up" data-unique="modal-sign-up">Or sign up online &#187;</a>
+
+        </div>
+
+        <div class="back-to-test">
+
+            <a href="#" class="back-to-test-button">Back to assessment</a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script src="./credit-quiz-script.js" type="application/javascript"></script>

@@ -1,0 +1,235 @@
+<style>
+
+
+    /*Quiz Assessment*/
+
+    section.quiz-assessment {
+        position: fixed;
+        bottom: -200px;
+        left: 0;
+        right: 0;
+        z-index: 11;
+
+    }
+
+    div.quiz-pop-up-box {
+        background-color: #2c495d;
+
+        color: #FFFFFF;
+        position: relative;
+        width: 90%;
+        max-width: 550px;
+        padding: 10px;
+        margin: 10px auto;
+
+        font-family: "Museo-300", sans-serif;
+        text-align: center;
+
+        border-radius: 5px;
+    }
+
+    .find-out-now-box {
+        margin: 40px 0;
+    }
+
+    .credit-cost-box {
+        margin-top: 50px;
+    }
+
+    /*Image*/
+    .unknown-report {
+        position: absolute;
+        width: 55px;
+        top: -30px;
+        left: 46%;
+    }
+
+    /*Text*/
+    p.credit-costing-bolded {
+        font-family: "Museo-700", sans-serif;
+        font-size: 24px;
+        margin: 0 auto;
+        line-height: 1.5;
+    }
+
+    p.credit-costing-subtext {
+        font-size: 22px;
+        margin: 0 auto;
+    }
+
+    a.find-out-now {
+        text-decoration: none;
+        color: #FFFFFF;
+        font-size: 16px;
+        padding: 15px 50px;
+        background-color: #c8634a;
+
+        border: 2px solid #FFFFFF;
+        border-radius: 5px;
+    }
+
+    a.find-out-now:hover {
+        background-color: #ad4537;
+    }
+
+    a.quiz-cerrado {
+        display: block;
+        position: relative;
+        text-decoration: none;
+        border: none;
+    }
+
+    span.quiz-exit-cross {
+        cursor: pointer;
+        color: #92c5de;
+        transition: 0.3s ease-out;
+        position: absolute;
+
+        transform: rotate(45deg);
+        top: -7px;
+        right: 10px;
+        font-size: 26px;
+    }
+
+    span.quiz-exit-cross:hover {
+        color: #aee6ff;
+    }
+
+    /*Media Queries*/
+    @media screen and (max-width: 520px) {
+
+        p.credit-costing-subtext, p.credit-costing-bolded {
+            font-size: 16px;
+        }
+
+        .unknown-report {
+            width: 40px;
+        }
+
+        .credit-cost-box {
+            margin-top: 20px;
+        }
+
+        a.find-out-now {
+            padding: 15px 35px;
+        }
+
+    }
+
+    @media screen and (max-width: 420px) {
+
+        p.credit-costing-subtext, p.credit-costing-bolded {
+            font-size: 14px;
+            margin-left: 5px;
+        }
+
+        .find-out-now-box {
+            margin-top: 30px;
+        }
+
+        a.find-out-now {
+            font-size: 15px;
+        }
+
+        .unknown-report {
+            width: 35px;
+        }
+
+        span.quiz-exit-cross {
+            font-size: 20px;
+        }
+
+    }
+
+</style>
+
+<section class="quiz-assessment">
+
+    <div class="quiz-pop-up-box">
+
+        <a class="quiz-cerrado" onclick="closePopUp()"><span class="quiz-exit-cross">+</span></a>
+
+
+        <img src="https://www.lexingtonlaw.com/content/dam/landing-pages/lexington/credit-quiz/Unknown.png"
+             class="unknown-report" alt="">
+
+
+        <div class="credit-cost-box">
+            <p class="credit-costing-bolded">
+                What is your credit costing you?
+            </p>
+
+            <p class="credit-costing-subtext">
+                Answer 3 questions.
+            </p>
+        </div>
+
+        <div class="find-out-now-box">
+
+            <a href="/content/landingpages/lexingtonlawlp/credit-quiz.html" class="find-out-now">FIND OUT NOW</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+    $(document).ready(function () {
+        $('<section class="quiz-assessment">\n' +
+            '\n' +
+            '    <div class="quiz-pop-up-box">\n' +
+            '\n' +
+            '        <a class="quiz-cerrado" onclick="closePopUp()"><span class="quiz-exit-cross">+</span></a>\n' +
+            '\n' +
+            '        <div class="sprite-image-box">\n' +
+            '\n' +
+            '            <img src="https://www.lexingtonlaw.com/content/dam/landing-pages/lexington/credit-quiz/Unknown.png" class="unknown-report" alt="">\n' +
+            '\n' +
+            '        </div>\n' +
+            '\n' +
+            '        <div class="credit-cost-box">\n' +
+            '            <p class="credit-costing-bolded">\n' +
+            '                What is your credit costing you?\n' +
+            '            </p>\n' +
+            '\n' +
+            '            <p class="credit-costing-subtext">\n' +
+            '                Answer 3 questions.\n' +
+            '            </p>\n' +
+            '        </div>\n' +
+            '\n' +
+            '        <div class="find-out-now-box">\n' +
+            '\n' +
+            '            <a href="/content/landingpages/lexingtonlawlp/credit-quiz.html" class="find-out-now">FIND OUT</a>\n' +
+            '\n' +
+            '        </div>\n' +
+            '\n' +
+            '    </div>\n' +
+            '\n' +
+            '</section>').appendTo('body');
+    });
+</script>
+
+<script>
+
+    function closePopUp() {
+
+        $(".quiz-pop-up-box").fadeOut("slow", "swing");
+
+    }
+
+    $(function () {
+
+        $(window).on("scroll", function () {
+            if ($("html").scrollTop() >= 500 || $("body").scrollTop() >= 500) {
+                $(window).off("scroll");
+                setTimeout(function () {
+                    $(".quiz-assessment").fadeIn({queue: false, duration: 'slow'});
+                    $(".quiz-assessment").animate({bottom: "0px"}, 'slow');
+                }, 500);
+            }
+        });
+
+    })
+
+</script>
